@@ -42,7 +42,7 @@ exports.SQLDatabase = function(parameters){
 	}
 	else if(parameters.type == "sqlite"){
 		currentConnection = new (require("sqlite")
-			.Connection)(parameters.host, parameters.name, parameters.username, parameters.password); 
+			.Database)(parameters.location); 
 	}
 	else{
 		throw new Error("Unsupported database engine");
