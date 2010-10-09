@@ -16,7 +16,7 @@ exports.SQLDatabase = function(parameters){
 /*		currentConnection = new (require("jar:http://github.com/masuidrive/node-mysql/zipball/master!/lib/mysql.js")
 			.Connection)(parameters.host || "localhost", parameters.username, parameters.password, parameters.name, parameters.port || 8889);
 		currentConnection.connect();*/ 
-		myConn = require("jar:http://github.com/Sannis/node-mysql-libmysqlclient/zipball/master!/mysql-libmysqlclient.js")
+		myConn = require("mysql")
 				.createConnection(parameters.host || "localhost", parameters.username, parameters.password, parameters.name, parameters.port || 8889, "/Applications/MAMP/tmp/mysql/mysql.sock");
 		if(!myConn.connected()){
 			throw new Error("Connection error #" + myConn.connectErrno() + ": " + myConn.connectError());
@@ -41,7 +41,7 @@ exports.SQLDatabase = function(parameters){
 		}
 	}
 	else if(parameters.type == "sqlite"){
-		currentConnection = new (require("jar:http://github.com/orlandov/node-sqlite/zipball/master!/lib/sqlite.js")
+		currentConnection = new (require("sqlite")
 			.Connection)(parameters.host, parameters.name, parameters.username, parameters.password); 
 	}
 	else{
