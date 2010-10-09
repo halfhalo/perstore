@@ -18,8 +18,8 @@
 		"promised-io": "http://github.com/kriszyp/promised-io/zipball/v0.2.1",
 		"commonjs-utils": "http://github.com/kriszyp/commonjs-utils/zipball/v0.2.1",
 		"mongodb": "jar:http://github.com/christkv/node-mongodb-native/zipball/master!/lib/mongodb/",
-		"sqlite":"http://github.com/orlandov/node-sqlite/zipball/master!/lib/",
-		"mysql":"jar:http://github.com/Sannis/node-mysql-libmysqlclient/zipball/master!/"
+		"sqlite":"http://github.com/orlandov/node-sqlite/zipball/master!/lib/sqlite.js",
+		"mysql":"jar:http://github.com/Sannis/node-mysql-libmysqlclient/zipball/master!/mysql_bindings.js"
 	},
 	"overlay": {
 		"narwhal": {
